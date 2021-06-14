@@ -1,0 +1,75 @@
+/*---------------
+    Footer-nav
+---------------*/
+
+.footer-nav-container {
+  background-color: $footer-nav-bg-color;
+  color: $main-text-color;
+  padding: 42px;
+}
+
+.footer-nav__row {
+  @include flexType(f, sa);
+  @include listFlexGap(30);
+  margin-top: 0;
+}
+
+.footer-column {
+  @include itemFlexGap(30, 7);
+  margin-top: 0;
+}
+
+.footer-nav__first-column {
+  flex-shrink: 0;
+  margin-right: 50px;
+}
+
+.footer-nav__logo {
+  display: inline-flex;
+  fill: $main-text-color;
+  margin-bottom: 10px;
+}
+
+.footer-nav-icons {
+  @include flexType(f, c, c, c);
+}
+
+.footer-nav-icons-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer-nav-icons-list:last-child {
+  margin-bottom: 0;
+}
+
+.footer-nav__icon {
+  @include flexType(f, c, c);
+  fill: $main-text-color;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: $accent-color;
+  @include transitionRules(background-color, fill);
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background-color: $main-bg-color;
+    fill: $accent-color;
+  }
+}
+
+.footer-nav-list__link {
+  @include fontLineWeightLetter(11, 25, med, null, 0.85, 11);
+  margin-bottom: 0;
+}
+
+.footer-nav-list__subtitle {
+  @include fontLineWeightLetter(11, 13, med, null, 0.85, 11);
+  margin-bottom: 20px;
+}
+
+.footer-nav-list__item {
+  font-style: normal;
+  @include fontLineWeightLetter(11, 19, med, null, 0.85, 11);
+}

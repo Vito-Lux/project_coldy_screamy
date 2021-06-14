@@ -1,0 +1,74 @@
+/*---------------
+  Capabilities
+---------------*/
+
+.capabilities-header-row {
+  @include flexType(f, sb, c);
+  margin-bottom: em(78);
+}
+
+.capabilities__subtitle {
+  @include flexType(f, c, fs, c);
+  @include fontLineWeightLetter(18, 24, bold, null, 2.31, 18);
+  margin-right: em(40);
+
+  &::after {
+    content: "";
+    display: block;
+    margin-top: em(10);
+    width: 26%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: $accent-color;
+  }
+}
+
+.capabilities__text {
+  @include fontLineWeightLetter(11, 19, norm, null, 0.2, 11);
+  width: calc(100% / 12 * 6);
+}
+
+.capabilities__button {
+  @include flexType(f, c, c);
+  min-width: 150px;
+  min-height: 40px;
+  background-color: $accent-color;
+  border-radius: 4px;
+  padding: em(10) em(30);
+  color: $main-text-color;
+  @include fontLineWeightLetter(13, 17, bold, null, 0.5, 13);
+
+  @include transitionRules(transform);
+
+  &:hover,
+  &:focus {
+    transform: $transform-effect;
+  }
+}
+
+.capabilities-row {
+  @include flexType(f);
+  margin-left: -28px;
+  margin-bottom: 80px;
+}
+
+.column {
+  @include borderSolid(2, $main-border-color);
+  flex: 0 1 33.333%;
+  margin-left: 28px;
+  padding: 38px 22px;
+}
+
+.column-list__icon {
+  margin-bottom: 24px;
+}
+
+.column-list__subtitle {
+  width: calc(100% / 12 * 11);
+  @include fontLineWeightLetter(14, 24, eb, null, 0.43, 16);
+  margin-bottom: 14px;
+}
+
+.column-list__text {
+  @include fontLineWeightLetter(13, 23, norm, null, 0.19, 13);
+}

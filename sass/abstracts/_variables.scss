@@ -1,0 +1,42 @@
+// Base-colors
+$logo-text-color: #dadada;
+$main-text-color: #ffffff;
+$sec-text-color: #48555b;
+$accent-color: #00a4e5;
+// Bg-colors
+$main-bg-color: #ffffff;
+$sec-bg-color: #171819;
+$footer-nav-bg-color: #141a20;
+// Linear-gradient
+$line-grad: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+// Box-shadow
+$box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+// Border-colors
+$main-border-color: #e6e6e6;
+$sub-border-color: #979797;
+// Fonts
+$main-font: "Open Sans", sans-serif;
+// Transition
+$transition-duration: 250ms;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// Transform
+$transform-effect: scale(1.1, 1.2);
+// Font-size
+$font-standard-size: 16;
+// Font-weight
+$thin-font-weight: 100;
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$bold-font-weight: 700;
+$black-font-weight: 900;
+// Letter-spacing
+$base-letter-spacing: 0.03em;
+$pixel-letter-spacing: 1.08;
+// Line-height
+$base-line-height: 1.2;
+$secondary-line-height: 1.71;
+$additional-line-height: 1.5;
+// Layout-width
+$fullLayoutWidth: 1440px;
+$sidePadding: 250px * 2;

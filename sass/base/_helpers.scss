@@ -1,0 +1,25 @@
+.container {
+  @include containerWidth(work);
+  width: 100%;
+
+  @include forSize(minmob) {
+    width: 480px;
+  }
+
+  @include forSize(mintab) {
+    width: 768px;
+  }
+
+  @include forSize(minpc) {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.visually-hidden {
+  @extend %visually-hidden;
+}

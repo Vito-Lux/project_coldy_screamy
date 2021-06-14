@@ -1,0 +1,119 @@
+.dark .modal__content {
+  background-color: rgba(32, 35, 54, 1);
+}
+
+.modal__form {
+  @include flexType(f, null, null, c);
+  // background-image: $addtitional-line-grad, url("../../images/thousand-first.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  .dark & {
+    @include flexType(f, null, null, c);
+    // background-image: $dark-theme-line-grad, url("../../images/thousand-first.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top;
+    background-color: $main-text-color;
+  }
+}
+
+.modal__title {
+  @include flexType(c, c, c);
+  padding-top: 80px;
+  @include fontLineWeightLetter(32, 48, eb, base);
+  color: $sec-text-color;
+}
+
+.modal__label {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  margin-bottom: 6px;
+  @include fontLineWeightLetter(12, 14, eb, base);
+  color: $sec-text-color;
+}
+
+.modal__field {
+  @include flexType(f, null, null, c);
+  min-width: 448px;
+  min-height: 40px;
+  margin-top: 4px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include transitionRules(border, outline);
+
+  &:hover,
+  &:focus {
+    outline: $accent-color;
+    cursor: pointer;
+    @include borderSolid(1, $accent-color);
+  }
+}
+
+.modal__field:hover + .modal__field-img,
+.modal__field:focus + .modal__field-img {
+  @include transitionRules(fill);
+  fill: $accent-color;
+}
+
+.modal__field-img {
+  position: absolute;
+  top: 39px;
+  left: 50px;
+}
+
+.modal__password-recovery {
+  display: inline-flex;
+  color: $accent-color;
+  @include fontLineWeightLetter(16, 24, eb, base);
+  margin-bottom: 10px;
+}
+
+.modal__button {
+  @include flexType(c, c, c);
+  // @extend .right-block__button;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.modal-icons__text {
+  @include flexType(c, c, c);
+  text-transform: capitalize;
+  @include fontLineWeightLetter(16, 24, norm, base);
+  color: $sec-text-color;
+  margin-bottom: 10px;
+}
+
+.modal-icons__list {
+  @include flexType(c, c, c);
+}
+
+.modal-icons__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.modal-icons__item:last-child {
+  margin-right: 0;
+}
+
+.modal-icons__link {
+  @include flexType(c, c, c);
+  width: 48px;
+  height: 48px;
+  @include borderSolid(1, $accent-color);
+  border-radius: 50%;
+  @include transitionRules(background-color);
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background-color: $accent-color;
+    fill: $main-bg-color;
+  }
+}

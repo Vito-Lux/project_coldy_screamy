@@ -1,0 +1,35 @@
+/*---------------
+    Header
+---------------*/
+
+.header {
+  @include borderSolid(1, $main-border-color);
+}
+
+.header-container {
+  padding-top: em(30);
+  padding-bottom: em(30);
+  @include flexType(f, sb, c);
+}
+
+.header-nav__list {
+  @include flexType(f);
+}
+
+.header-nav__item:not(:last-child) {
+  margin-right: em(48);
+}
+
+.header-nav__item:last-child {
+  margin-right: 0;
+}
+
+.header-nav__link {
+  @include fontLineWeightLetter(12, 16, bold, null, 1.09, 12);
+  @include transitionRules(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

@@ -1,0 +1,32 @@
+/*---------------
+      Trigger
+---------------*/
+
+.trigger {
+  background-image: url(../../images/trigger_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.trigger-container {
+  padding-top: 120px;
+  padding-bottom: 190px;
+}
+
+.trigger__subtitle {
+  @include flexType(f, c, c);
+  @include fontLineWeightLetter(30, 36, eb, null, 0.15, 30);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 34px;
+  width: calc(100% / 12 * 4);
+  text-align: center;
+}
+
+.trigger__button {
+  @extend .capabilities__button;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}

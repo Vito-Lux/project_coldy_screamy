@@ -1,0 +1,24 @@
+/*---------------
+      Hero
+---------------*/
+
+.hero {
+  background-image: url(../../images/hero_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: em(300);
+  padding-bottom: em(300);
+}
+
+.hero__title {
+  @include flexType(f, c);
+  @include fontLineWeightLetter(60, 70, bold, null, 5.71, 60);
+  color: $main-text-color;
+  margin-bottom: 10px;
+}
+
+.hero__text {
+  @include flexType(f, c);
+  @include fontLineWeightLetter(16, 22, norm, base);
+  color: $main-text-color;
+}

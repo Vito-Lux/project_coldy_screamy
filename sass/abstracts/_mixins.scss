@@ -1,0 +1,191 @@
+// Flex
+
+@mixin flexType(
+  $display-type: null,
+  $justify-content-type: null,
+  $align-items-type: null,
+  $direction-type: null,
+  $wrap-type: null
+) {
+  @if ($display-type != null) {
+    @if ($display-type == "f") {
+      display: flex;
+    } @else if ($display-type == "if") {
+      display: inline-flex;
+    }
+  }
+
+  @if ($justify-content-type != null) {
+    @if ($justify-content-type == "c") {
+      justify-content: center;
+    } @else if ($justify-content-type == "sb") {
+      justify-content: space-between;
+    } @else if ($justify-content-type == "sa") {
+      justify-content: space-around;
+    } @else if ($justify-content-type == "fs") {
+      justify-content: flex-start;
+    } @else if ($justify-content-type == "fe") {
+      justify-content: flex-end;
+    }
+  }
+
+  @if ($align-items-type != null) {
+    @if ($align-items-type == "c") {
+      align-items: center;
+    } @else if ($align-items-type == "b") {
+      align-items: baseline;
+    } @else if ($align-items-type == "fs") {
+      align-items: flex-start;
+    } @else if ($align-items-type == "fe") {
+      align-items: flex-end;
+    }
+  }
+
+  @if ($direction-type != null) {
+    @if ($direction-type == "r") {
+      flex-direction: row;
+    } @else if ($direction-type == "rr") {
+      flex-direction: row-reverse;
+    } @else if ($direction-type == "c") {
+      flex-direction: column;
+    } @else if ($direction-type == "cr") {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @if ($wrap-type != null) {
+    @if ($wrap-type == "w") {
+      flex-wrap: wrap;
+    } @else if ($wrap-type == "nr") {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+// Borders
+
+@mixin borderSolid($border-size, $color-color) {
+  border: #{$border-size * 1px} solid $color-color;
+}
+
+// Transitions
+
+@mixin transitionRules($attribute...) {
+  transition-duration: $transition-duration;
+  transition-property: $attribute;
+  transition-timing-function: $transition-timing-function;
+}
+
+// Flexbox-gap
+
+@mixin listFlexGap($flexbox-gap) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * #{$flexbox-gap * 1px});
+  margin-left: calc(-1 * #{$flexbox-gap * 1px});
+}
+
+@mixin itemFlexGap($flexbox-gap, $number) {
+  margin-top: #{$flexbox-gap * 1px};
+  margin-left: #{$flexbox-gap * 1px};
+  flex-basis: calc((100% - #{$number} * #{$flexbox-gap * 1px}) / #{$number});
+}
+
+// Fs-lh-fw-ls
+
+@mixin fontLineWeightLetter($font-size, $line-height, $font-weight, $letter-spacing, $px: null, $basePx: null) {
+  font-size: #{$font-size * 1px};
+
+  @if ($line-height == "base") {
+    line-height: $base-line-height;
+  } @else if ($line-height == "sec") {
+    line-height: $secondary-line-height;
+  } @else if ($line-height == "add") {
+    line-height: $additional-line-height;
+  } @else if ($line-height != "vert") {
+    line-height: decimal-round(($line-height / $font-size), 2);
+  }
+
+  @if ($font-weight == "thin") {
+    font-weight: $thin-font-weight;
+  } @else if ($font-weight == "light") {
+    font-weight: $light-font-weight;
+  } @else if ($font-weight == "norm") {
+    font-weight: $regular-font-weight;
+  } @else if ($font-weight == "med") {
+    font-weight: $medium-font-weight;
+  } @else if ($font-weight == "bold") {
+    font-weight: $bold-font-weight;
+  } @else if ($font-weight == "eb") {
+    font-weight: $black-font-weight;
+  }
+
+  @if ($letter-spacing == "base") {
+    letter-spacing: $base-letter-spacing;
+  } @else if ($letter-spacing == "dbl") {
+    letter-spacing: #{$base-letter-spacing * 2};
+  } @else if ($letter-spacing == "div") {
+    letter-spacing: #{$base-letter-spacing / 3};
+  } @else if ($letter-spacing == null) {
+    letter-spacing: decimal-floor(($px / $basePx) * 1em, 3);
+  } @else {
+    letter-spacing: decimal-round($pixel-letter-spacing / $font-size) * 1em;
+  }
+}
+
+// Container
+
+@mixin containerWidth($layoutWidth) {
+  @if ($layoutWidth == "work") {
+    max-width: $fullLayoutWidth - $sidePadding;
+  } @else if ($layoutWidth == "full") {
+    max-width: $fullLayoutWidth;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Media
+
+@mixin forSize($range) {
+  $mobile: 480px;
+  $tablet: 768px;
+  $desktop: 1200px;
+
+  @if $range == "maxmob" {
+    @media screen and (max-width: #{$mobile - 0.02px}) {
+      @content;
+    }
+  } @else if ($range == "minmob") {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  } @else if ($range == "maxtab") {
+    @media screen and (max-width: #{$tablet - 0.02px}) {
+      @content;
+    }
+  } @else if ($range == "mintab") {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if ($range == "maxpc") {
+    @media screen and (max-width: #{$desktop - 0.02px}) {
+      @content;
+    }
+  } @else if ($range == "minpc") {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+}
+
+// Media-for-images
+
+@mixin imgMedia {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}

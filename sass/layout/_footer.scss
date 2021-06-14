@@ -1,0 +1,17 @@
+/*---------------
+      Footer
+---------------*/
+
+.footer {
+  background-color: $sec-bg-color;
+  padding: 22px 0;
+}
+
+.footer__text {
+  @include flexType(f, c, c);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  @include fontLineWeightLetter(11, 13, bold, null, 0.85, 11);
+  color: $main-text-color;
+}
