@@ -3,18 +3,18 @@
 ---------------*/
 
 .trigger {
-  background-image: url(../../images/trigger_bg.jpg);
+  background-image: url("../../images/trigger_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
   @include imgMedia() {
-    background-image: url(../../images/trigger_bg@2x.jpg);
+    background-image: url("../../images/trigger_bg@2x.jpg");
   }
 
   @include forSize(minpc) {
-    background-image: url(../../images/trigger_bg.jpg);
+    background-image: url("../../images/trigger_bg.jpg");
     @include imgMedia() {
-      background-image: url(../../images/trigger_bg@2x.jpg);
+      background-image: url("../../images/trigger_bg@2x.jpg");
     }
   }
 }

@@ -935,7 +935,7 @@ svg {
       Hero
 ---------------*/
 .hero {
-  background-image: url(../../images/hero_bg.jpg);
+  background-image: url("../../images/hero_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 18.75em;
@@ -1203,7 +1203,7 @@ svg {
       Trigger
 ---------------*/
 .trigger {
-  background-image: url(../../images/trigger_bg.jpg);
+  background-image: url("../../images/trigger_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -1211,19 +1211,19 @@ svg {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .trigger {
-    background-image: url(../../images/trigger_bg@2x.jpg);
+    background-image: url("../../images/trigger_bg@2x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
   .trigger {
-    background-image: url(../../images/trigger_bg.jpg);
+    background-image: url("../../images/trigger_bg.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .trigger {
-    background-image: url(../../images/trigger_bg@2x.jpg);
+    background-image: url("../../images/trigger_bg@2x.jpg");
   }
 }
 
