@@ -13,7 +13,11 @@
 }
 
 .header-nav__list {
-  @include flexType(f);
+  display: none;
+
+  @include forSize(mintab) {
+    @include flexType(f);
+  }
 }
 
 .header-nav__item:not(:last-child) {

@@ -9,37 +9,59 @@
 }
 
 .footer-nav__row {
-  @include flexType(f, sa);
+  @include flexType(f, c, fs, c);
   @include listFlexGap(30);
-  margin-top: 0;
+
+  @include forSize(mintab) {
+    @include flexType(f, sa, fs, r);
+    margin-top: 0;
+  }
 }
 
 .footer-column {
   @include itemFlexGap(30, 7);
-  margin-top: 0;
+
+  @include forSize(minpc) {
+    margin-top: 0;
+  }
 }
 
 .footer-nav__first-column {
-  flex-shrink: 0;
-  margin-right: 50px;
+  @include flexType(f, c, c, c);
+
+  @include forSize(minpc) {
+    flex-shrink: 0;
+    margin-right: 50px;
+  }
 }
 
 .footer-nav__logo {
-  display: inline-flex;
+  @include flexType(if);
   fill: $main-text-color;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .footer-nav-icons {
-  @include flexType(f, c, c, c);
+  @include flexType(f, c, c, r);
+
+  @include forSize(minpc) {
+    @include flexType(null, null, null, c);
+  }
 }
 
 .footer-nav-icons-list:not(:last-child) {
-  margin-bottom: 20px;
+  margin-right: 20px;
+  @include forSize(minpc) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .footer-nav-icons-list:last-child {
-  margin-bottom: 0;
+  margin-right: 0;
+  @include forSize(minpc) {
+    margin-bottom: 0;
+  }
 }
 
 .footer-nav__icon {
@@ -64,9 +86,60 @@
   margin-bottom: 0;
 }
 
-.footer-nav-list__subtitle {
-  @include fontLineWeightLetter(11, 13, med, null, 0.85, 11);
+.footer-nav__subtitle {
+  display: inline-block;
+  position: relative;
+  @include fontLineWeightLetter(16, 20, med, null, 0.85, 11);
   margin-bottom: 20px;
+  font-style: normal;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    width: 10px;
+    height: 2px;
+    background-color: $accent-color;
+    @include transitionRules();
+
+    @include forSize(minpc) {
+      top: 5px;
+    }
+  }
+
+  &::before {
+    content: "";
+    transform: rotate(40deg);
+    left: -24px;
+  }
+
+  &::after {
+    content: "";
+    transform: rotate(-40deg);
+    left: -17px;
+  }
+
+  @include forSize(minpc) {
+    @include fontLineWeightLetter(11, 13, med, null, 0.85, 11);
+  }
+}
+
+.footer-nav__subtitle.active::before,
+.footer-nav__subtitle.active::after {
+  content: "";
+  background-color: $main-bg-color;
+}
+
+.footer-nav__subtitle.active::before {
+  content: "";
+  transform: rotate(-40deg);
+}
+
+.footer-nav__subtitle.active::after {
+  content: "";
+  transform: rotate(40deg);
 }
 
 .footer-nav-list__item {

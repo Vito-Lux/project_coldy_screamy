@@ -1,29 +1,19 @@
-.dark .modal__content {
-  background-color: rgba(32, 35, 54, 1);
-}
-
 .modal__form {
   @include flexType(f, null, null, c);
-  // background-image: $addtitional-line-grad, url("../../images/thousand-first.png");
+  background-image: url("../../images/hero_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
-
-  .dark & {
-    @include flexType(f, null, null, c);
-    // background-image: $dark-theme-line-grad, url("../../images/thousand-first.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top;
-    background-color: $main-text-color;
-  }
+  background-position: center;
 }
 
 .modal__title {
   @include flexType(c, c, c);
-  padding-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
   @include fontLineWeightLetter(32, 48, eb, base);
-  color: $sec-text-color;
+  color: $main-text-color;
+  margin-bottom: 20px;
 }
 
 .modal__label {
@@ -33,7 +23,7 @@
   padding-top: 10px;
   margin-bottom: 6px;
   @include fontLineWeightLetter(12, 14, eb, base);
-  color: $sec-text-color;
+  color: $main-text-color;
 }
 
 .modal__field {
@@ -45,20 +35,22 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  @include transitionRules(border, outline);
+  @include transitionRules();
 
   &:hover,
   &:focus {
-    outline: $accent-color;
+    background-color: $sec-text-color;
+    color: $main-bg-color;
+    box-shadow: $box-shadow;
     cursor: pointer;
-    @include borderSolid(1, $accent-color);
+    @include borderSolid(1, $main-bg-color);
   }
 }
 
 .modal__field:hover + .modal__field-img,
 .modal__field:focus + .modal__field-img {
   @include transitionRules(fill);
-  fill: $accent-color;
+  fill: $main-bg-color;
 }
 
 .modal__field-img {
@@ -67,53 +59,22 @@
   left: 50px;
 }
 
-.modal__password-recovery {
-  display: inline-flex;
-  color: $accent-color;
-  @include fontLineWeightLetter(16, 24, eb, base);
-  margin-bottom: 10px;
-}
-
 .modal__button {
-  @include flexType(c, c, c);
-  // @extend .right-block__button;
+  @include flexType(f, c, c);
+  @extend .capabilities__button;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-}
-
-.modal-icons__text {
-  @include flexType(c, c, c);
-  text-transform: capitalize;
-  @include fontLineWeightLetter(16, 24, norm, base);
-  color: $sec-text-color;
-  margin-bottom: 10px;
-}
-
-.modal-icons__list {
-  @include flexType(c, c, c);
-}
-
-.modal-icons__item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.modal-icons__item:last-child {
-  margin-right: 0;
-}
-
-.modal-icons__link {
-  @include flexType(c, c, c);
-  width: 48px;
-  height: 48px;
-  @include borderSolid(1, $accent-color);
-  border-radius: 50%;
-  @include transitionRules(background-color);
+  margin-bottom: 50px;
+  margin-top: 40px;
+  background-color: $main-bg-color;
+  @include borderSolid(4, $sec-bg-color);
+  color: $sec-bg-color;
+  @include transitionRules();
 
   &:hover,
   &:focus {
-    border-radius: 50%;
-    background-color: $accent-color;
-    fill: $main-bg-color;
+    background-color: $sec-text-color;
+    color: $main-bg-color;
+    @include borderSolid(4, $main-bg-color);
   }
 }

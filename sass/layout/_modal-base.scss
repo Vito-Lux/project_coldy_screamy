@@ -26,7 +26,7 @@
 .modal__content {
   position: relative;
   min-width: 528px;
-  min-height: 581px;
+  min-height: 461px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: $main-bg-color;
@@ -37,17 +37,18 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  border: 8px solid rgba(26, 190, 132, 0.5);
+  @include borderSolid(8, $main-bg-color);
   fill: $main-text-color;
   border-radius: 50%;
   padding: 6px;
-  background-color: $main-bg-color;
+  background-color: $sec-text-color;
 
-  @include transitionRules(fill, border);
+  @include transitionRules();
 
   &:hover,
   &:focus {
-    fill: $accent-color;
-    border: 8px solid rgb(26, 190, 132);
+    fill: $sec-text-color;
+    @include borderSolid(8, $sec-text-color);
+    background-color: $main-bg-color;
   }
 }

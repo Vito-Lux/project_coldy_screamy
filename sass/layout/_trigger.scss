@@ -7,11 +7,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+  @include imgMedia() {
+    background-image: url(../../images/trigger_bg@2x.jpg);
+  }
+
+  @include forSize(minpc) {
+    background-image: url(../../images/trigger_bg.jpg);
+    @include imgMedia() {
+      background-image: url(../../images/trigger_bg@2x.jpg);
+    }
+  }
 }
 
 .trigger-container {
-  padding-top: 120px;
+  padding-top: 50px;
   padding-bottom: 190px;
+
+  @include forSize(minpc) {
+    padding-top: 120px;
+  }
 }
 
 .trigger__subtitle {

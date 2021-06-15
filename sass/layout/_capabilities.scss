@@ -3,14 +3,24 @@
 ---------------*/
 
 .capabilities-header-row {
-  @include flexType(f, sb, c);
+  @include flexType(f, c, c, c);
   margin-bottom: em(78);
+
+  @include forSize(minpc) {
+    @include flexType(f, sb, c, r);
+  }
 }
 
 .capabilities__subtitle {
-  @include flexType(f, c, fs, c);
+  @include flexType(f, c, c, c);
   @include fontLineWeightLetter(18, 24, bold, null, 2.31, 18);
-  margin-right: em(40);
+  margin-bottom: em(90);
+
+  @include forSize(minpc) {
+    @include flexType(f, c, fs, c);
+    margin-right: em(40);
+    margin-bottom: 0;
+  }
 
   &::after {
     content: "";
@@ -24,8 +34,16 @@
 }
 
 .capabilities__text {
-  @include fontLineWeightLetter(11, 19, norm, null, 0.2, 11);
-  width: calc(100% / 12 * 6);
+  @include fontLineWeightLetter(16, 24, norm, null, 0.2, 11);
+  text-align: center;
+  margin-bottom: em(60);
+
+  @include forSize(minpc) {
+    @include fontLineWeightLetter(11, 19, norm, null, 0.2, 11);
+    width: calc(100% / 12 * 6);
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 
 .capabilities__button {
@@ -47,16 +65,25 @@
 }
 
 .capabilities-row {
-  @include flexType(f);
-  margin-left: -28px;
-  margin-bottom: 80px;
+  @include flexType(f, c, c, c);
+
+  @include forSize(minpc) {
+    @include flexType(null, null, null, r);
+    margin-left: -28px;
+    margin-bottom: 80px;
+  }
 }
 
 .column {
   @include borderSolid(2, $main-border-color);
-  flex: 0 1 33.333%;
-  margin-left: 28px;
   padding: 38px 22px;
+  margin-bottom: 20px;
+
+  @include forSize(minpc) {
+    flex: 0 1 33.333%;
+    margin-left: 28px;
+    margin-bottom: 0;
+  }
 }
 
 .column-list__icon {

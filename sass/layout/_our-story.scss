@@ -11,25 +11,40 @@
     content: "";
     display: block;
     margin-top: em(10);
-    width: 6%;
+    width: 18%;
     height: 2px;
     border-radius: 4px;
     background-color: $accent-color;
+
+    @include forSize(minpc) {
+      width: 6%;
+    }
   }
 }
 
 .story-row {
-  @include flexType(f, sb, fe);
+  @include flexType(f, c, c, c);
+
+  @include forSize(minpc) {
+    @include flexType(f, sb, fe, r);
+  }
 }
 
 .story-left-block {
-  width: calc(100% / 12 * 6);
+  @include forSize(minpc) {
+    width: calc(100% / 12 * 6);
+  }
 }
 
 .story-left-block__text {
-  width: calc(100% / 12 * 10);
   @include fontLineWeightLetter(20, 27, eb, null, 0.19, 20);
   margin-bottom: em(30);
+  text-align: center;
+
+  @include forSize(minpc) {
+    width: calc(100% / 12 * 10);
+    text-align: left;
+  }
 
   & span {
     color: $accent-color;
@@ -37,20 +52,45 @@
 }
 
 .story-left-block__subtext {
-  width: calc(100% / 12 * 11);
   @include fontLineWeightLetter(13, 23, med, null, 0.19, 13);
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include forSize(minpc) {
+    width: calc(100% / 12 * 11);
+    text-align: left;
+    margin-bottom: 0;
+  }
 }
 
 .story-right-block-list {
-  @include flexType(f, c, fs);
-  @include listFlexGap(20);
-  margin-top: 0;
+  @include flexType(f, c, fs, c);
+
+  @include forSize(mintab) {
+    @include flexType(f, c, c, r);
+  }
+
+  @include forSize(minpc) {
+    @include listFlexGap(20);
+    margin-top: 0;
+  }
 }
 
 .story-right-block-list__item {
   position: relative;
-  @include itemFlexGap(20, 3);
-  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include forSize(mintab) {
+    margin-right: 20px;
+  }
+
+  @include forSize(minpc) {
+    @include itemFlexGap(20, 3);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    max-width: 160px;
+  }
 }
 
 .story-right-block-list__item:last-child {
@@ -59,10 +99,13 @@
 
 .story-right-block__label {
   position: absolute;
-  top: em(10);
-  left: em(10);
-  right: 0;
-  width: calc(100% / 12 * 3);
   @include fontLineWeightLetter(24, 29, eb, null, 0.19, 24);
   color: $main-text-color;
+
+  @include forSize(minpc) {
+    top: em(10);
+    left: em(10);
+    right: 0;
+    width: calc(100% / 12 * 3);
+  }
 }

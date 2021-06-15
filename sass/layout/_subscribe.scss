@@ -4,30 +4,52 @@
 
 .subscribe {
   background-color: $sec-bg-color;
-  padding-top: 34px;
-  padding-bottom: 34px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+
+  @include forSize(minpc) {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
 }
 
 .subscribe-container {
-  @include flexType(f, c, c);
+  @include flexType(f, c, c, c);
+
+  @include forSize(minpc) {
+    @include flexType(f, c, c, r);
+  }
 }
 
 .subscribe__subtitle {
-  margin-right: 70px;
   @include fontLineWeightLetter(22, 30, eb, null, 0.85, 22);
   color: $main-text-color;
+
+  @include forSize(minpc) {
+    margin-right: 70px;
+  }
 }
 
 .subscribe__row {
-  @include flexType(f, c, c);
+  @include flexType(f, c, c, c);
+
+  @include forSize(minpc) {
+    @include flexType(f, c, c, r);
+  }
 }
 
 .subscribe__email {
-  min-width: 250px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 16px;
-  border-radius: 4px;
+  min-width: em(300);
+  padding-top: em(10);
+  padding-bottom: em(10);
+  padding-left: em(16);
+  border-radius: em(4);
+  margin-bottom: em(40);
+
+  @include forSize(minpc) {
+    min-width: em(250);
+    margin-bottom: 0;
+  }
 }
 
 .subscribe__button {

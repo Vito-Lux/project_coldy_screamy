@@ -28,27 +28,39 @@
     <nav class="header-nav">
       <ul class="header-nav__list">
         <li class="header-nav__item">
-          <a href="#"
+          <a href="/"
              class="header-nav__link">HOME</a>
         </li>
         <li class="header-nav__item">
-          <a href="#"
+          <a href="#about"
              class="header-nav__link">ABOUT</a>
         </li>
         <li class="header-nav__item">
-          <a href="#"
+          <a href="#services"
              class="header-nav__link">SERVICES</a>
         </li>
         <li class="header-nav__item">
-          <a href="#"
+          <a href="#work"
              class="header-nav__link">WORK</a>
         </li>
         <li class="header-nav__item">
-          <a href="#"
+          <a href="#contact"
              class="header-nav__link">CONTACT</a>
         </li>
       </ul>
     </nav>
+    <button class="header-button js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+      <svg class="header-button__image"
+           aria-label="Mobile-menu switcher"
+           width="40"
+           height="40">
+        <use class="header-button__icon-open"
+             href="./images/icons.svg#icon-menu-opener"></use>
+      </svg>
+    </button>
   </div>
 </header>
 
@@ -63,7 +75,8 @@
 
   <!-- OUR STORY -->
 
-  <section class="story section">
+  <section class="story section"
+           id="about">
     <div class="container">
       <h3 class="story__subtitle">OUR STORY</h3>
       <div class="story-row">
@@ -82,7 +95,8 @@
             <li class="story-right-block-list__item">
               <img src="./images/we_plan.jpg"
                    alt="tools for planing"
-                   class="story-right-block-list__first-img">
+                   class="story-right-block-list__first-img"
+                   width="300">
               <p class="story-right-block__label">
                 WE PLAN
               </p>
@@ -90,7 +104,8 @@
             <li class="story-right-block-list__item">
               <img src="./images/we_manage.jpg"
                    alt="notebook"
-                   class="story-right-block-list__second-img">
+                   class="story-right-block-list__second-img"
+                   width="300">
               <p class="story-right-block__label">
                 WE MANAGE
               </p>
@@ -98,7 +113,8 @@
             <li class="story-right-block-list__item">
               <img src="./images/we_build.jpg"
                    alt="architecture plans"
-                   class="story-right-block-list__third-img">
+                   class="story-right-block-list__third-img"
+                   width="300">
               <p class="story-right-block__label">
                 WE BUILD
               </p>
@@ -111,7 +127,8 @@
 
   <!-- CAPABILITIES -->
 
-  <section class="capabilities">
+  <section class="capabilities"
+           id="services">
     <div class="container">
       <div class="capabilities-header-row">
         <h3 class="capabilities__subtitle">OUR CAPABILITIES</h3>
@@ -179,17 +196,20 @@
 
   <!-- TRIGGER -->
 
-  <section class="trigger">
+  <section class="trigger"
+           id="work">
     <div class="trigger-container">
       <h3 class="trigger__subtitle">Want to build something amazing?</h3>
       <button class="trigger__button"
-              type="button">GET IN TOUCH</button>
+              type="button"
+              data-modal-open>GET IN TOUCH</button>
     </div>
   </section>
 
   <!-- SUBSCRIBE -->
 
-  <section class="subscribe">
+  <section class="subscribe"
+           id="contact">
     <div class="subscribe-container">
       <h3 class="subscribe__subtitle">Newsletter Signup</h3>
       <form action="#"
@@ -213,11 +233,8 @@
   <section class="footer-nav">
     <div class="footer-nav-container">
       <div class="footer-nav__row">
-        <div class="footer-nav__first-column footer-column">
+        <div class="footer-nav__first-column footer-column one-spoiler">
           <ul class="footer-nav-list">
-            <li class="footer-nav-list__item">
-              <h4 class="footer-nav-list__subtitle">COMPANY</h4>
-            </li>
             <li class="footer-nav-list__item">
               <a href="./index.html"
                  class="footer-nav__logo">
@@ -230,17 +247,13 @@
               </a>
             </li>
             <li class="footer-nav-list__item">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-              laoreet dolore
-              magna aliquam erat.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.
             </li>
           </ul>
         </div>
-        <div class="footer-nav__second-column footer-column">
+        <div class="footer-nav__second-column footer-column one-spoiler">
+          <h4 class="footer-nav__subtitle">LINKS</h4>
           <ul class="footer-nav-list">
-            <li class="footer-nav-list__item">
-              <h4 class="footer-nav-list__subtitle">LINKS</h4>
-            </li>
             <li class="footer-nav-list__item">
               <a href="#"
                  class="footer-nav-list__link">HOME</a>
@@ -263,11 +276,9 @@
             </li>
           </ul>
         </div>
-        <div class="footer-nav__third-column footer-column">
+        <div class="footer-nav__third-column footer-column one-spoiler">
+          <h4 class="footer-nav__subtitle">HELP</h4>
           <ul class="footer-nav-list">
-            <li class="footer-nav-list__item">
-              <h4 class="footer-nav-list__subtitle">HELP</h4>
-            </li>
             <li class="footer-nav-list__item">
               <a href="#"
                  class="footer-nav-list__link">FAQ</a>
@@ -282,11 +293,9 @@
             </li>
           </ul>
         </div>
-        <div class="footer-nav__fourth-column footer-column">
+        <div class="footer-nav__fourth-column footer-column one-spoiler">
+          <h4 class="footer-nav__subtitle">MORE</h4>
           <ul class="footer-nav-list">
-            <li class="footer-nav-list__item">
-              <h4 class="footer-nav-list__subtitle">CHECK FOR MORE</h4>
-            </li>
             <li class="footer-nav-list__item">
               <a href="#"
                  class="footer-nav-list__link">BLOG</a>
@@ -301,12 +310,10 @@
             </li>
           </ul>
         </div>
-        <div class="footer-nav__fifth-column footer-column">
+        <div class="footer-nav__fifth-column footer-column one-spoiler">
           <address class="footer-nav__address">
+            <h4 class="footer-nav__subtitle">CONTACTS</h4>
             <ul class="footer-nav-list">
-              <li class="footer-nav-list__item">
-                <h4 class="footer-nav-list__subtitle">CONTACT US</h4>
-              </li>
               <li class="footer-nav-list__item">
                 <p class="footer-nav-list__text">213 Baker Street Oriel City Kounty 7000 KNW, Kountry Name</p>
               </li>
@@ -318,7 +325,7 @@
               </li>
           </address>
         </div>
-        <div class="footer-nav__sixth-column footer-column">
+        <div class="footer-nav__sixth-column footer-column one-spoiler">
           <ul class="footer-nav-list footer-nav-icons">
             <li class="footer-nav-list__item footer-nav-icons-list">
               <a href="#"
@@ -366,7 +373,122 @@
   </div>
 </footer>
 
+<!-- Mobile-menu -->
+
+<div class="mobile-menu js-menu-container">
+  <button class="header-button js-close-menu"
+          type="button">
+    <svg class="header-button__image"
+         aria-label="Mobile-menu switcher"
+         width="40"
+         height="40">
+      <use class="header-button__icon-open"
+           href="./images/icons.svg#icon-menu-closer"></use>
+    </svg>
+  </button>
+  <ul class="mobile-nav-list">
+    <li class="mobile-nav-list__item">
+      <a href="#"
+         class="mobile-nav-list__link">HOME</a>
+    </li>
+    <li class="mobile-nav-list__item">
+      <a href="#"
+         class="mobile-nav-list__link">ABOUT</a>
+    </li>
+    <li class="mobile-nav-list__item">
+      <a href="#"
+         class="mobile-nav-list__link">SERVICES</a>
+    </li>
+    <li class="mobile-nav-list__item">
+      <a href="#"
+         class="mobile-nav-list__link">WORK</a>
+    </li>
+    <li class="mobile-nav-list__item">
+      <a href="#"
+         class="mobile-nav-list__link">CONTACT</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Modal -->
+
+<div class="modal is-hidden"
+     data-modal>
+  <div class="modal__body">
+    <div class="modal__content">
+      <button class="modal__close-button"
+              data-modal-close>
+        <svg class="modal__close-img"
+             width="20"
+             height="20">
+          <use href="images/icons.svg#icon-modal-close">
+          </use>
+        </svg>
+      </button>
+      <div class="modal-container">
+        <form class=" modal__form">
+          <h3 class="modal__title">Sign Up</h3>
+          <label class="modal__label">
+            E-mail
+            <input class="modal__field"
+                   type="email"
+                   name="usermail"
+                   required>
+            <svg class="modal__field-img"
+                 width="18"
+                 height="18">
+              <use href="images/icons.svg#icon-email">
+              </use>
+            </svg>
+          </label>
+          <label class="modal__label">
+            Telephone
+            <input class="modal__field"
+                   type="tel"
+                   name="telephone"
+                   pattern="[0-9]{11}"
+                   required>
+            <svg class="modal__field-img"
+                 width="18"
+                 height="18">
+              <use href="images/icons.svg#icon-tel">
+              </use>
+            </svg>
+          </label>
+          <label class="modal__label">
+            Username
+            <input class="modal__field"
+                   type="text"
+                   name="username"
+                   required>
+            <svg class="modal__field-img"
+                 width="18"
+                 height="18">
+              <use href="images/icons.svg#icon-user">
+              </use>
+            </svg>
+          </label>
+          <div class="modal__btn">
+            <button class="modal__button"
+                    type="submit">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <body>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+          integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+          crossorigin="anonymous"></script>
+  <script defer
+          src="js/mobile-menu.js"></script>
+  <script src="js/spoiler.js"></script>
+  <script src="js/modal-login.js"></script>
 
 </body>
 
