@@ -12,483 +12,532 @@
   <title>Konstruct Inc</title>
 </head>
 
-<!-- HEADER -->
+<body>
 
-<header class="header">
-  <div class="header-container container">
-    <a href="./index.html"
-       class="header__logo">
-      <svg class="logo-svg"
-           aria-label="Konstruct Inc Logo"
-           width='100'
-           height='24'>
-        <use href="./images/icons.svg#icon-logo"></use>
-      </svg>
-    </a>
-    <nav class="header-nav">
-      <ul class="header-nav__list">
-        <li class="header-nav__item">
-          <a href="/"
-             class="header-nav__link">HOME</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#about"
-             class="header-nav__link">ABOUT</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#services"
-             class="header-nav__link">SERVICES</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#work"
-             class="header-nav__link">WORK</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#contact"
-             class="header-nav__link">CONTACT</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="header-button js-open-menu"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-menu">
+  <!-- PRELOADER -->
+
+  <div class="loader">
+    <img src="./images/7gQj.gif"
+         alt="">
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="header-container container">
+      <a href="./index.html"
+         class="header__logo">
+        <svg class="logo-svg"
+             aria-label="Konstruct Inc Logo"
+             width='100'
+             height='24'>
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="/"
+               class="header-nav__link">HOME</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#about"
+               class="header-nav__link">ABOUT</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#services"
+               class="header-nav__link">SERVICES</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#work"
+               class="header-nav__link">WORK</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#contact"
+               class="header-nav__link">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header-button js-open-menu"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <svg class="header-button__image"
+             aria-label="Mobile-menu switcher"
+             width="40"
+             height="40">
+          <use class="header-button__icon-open"
+               href="./images/icons.svg#icon-menu-opener"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <h1 class="hero__title">PARTNER WITH KONSTRUCT</h1>
+      <p class="hero__text">An award-winning construction management firm</p>
+    </section>
+
+    <!-- OUR STORY -->
+
+    <section class="story section"
+             id="about">
+      <div class="container">
+        <h3 class="story__subtitle">OUR STORY</h3>
+        <div class="story-row">
+          <div class="story-left-block">
+            <p class="story-left-block__text">Founded in 2011 by John Mathew Smith, <span>Konstruct</span> has become
+              the
+              number one
+              construction management firm</p>
+            <p class="story-left-block__subtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+              euismod
+              tincidunt ut
+              laoreet dolore magna aliquam erat.</p>
+          </div>
+          <div class="story-right-block">
+            <ul class="story-right-block-list">
+              <li class="story-right-block-list__item">
+                <img src="./images/we_plan.jpg"
+                     alt="tools for planing"
+                     class="story-right-block-list__first-img"
+                     width="300">
+                <p class="story-right-block__label">
+                  WE PLAN
+                </p>
+              </li>
+              <li class="story-right-block-list__item">
+                <img src="./images/we_manage.jpg"
+                     alt="notebook"
+                     class="story-right-block-list__second-img"
+                     width="300">
+                <p class="story-right-block__label">
+                  WE MANAGE
+                </p>
+              </li>
+              <li class="story-right-block-list__item">
+                <img src="./images/we_build.jpg"
+                     alt="architecture plans"
+                     class="story-right-block-list__third-img"
+                     width="300">
+                <p class="story-right-block__label">
+                  WE BUILD
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+
+    <section class="capabilities"
+             id="services">
+      <div class="container">
+        <div class="capabilities-header-row">
+          <h3 class="capabilities__subtitle">OUR CAPABILITIES</h3>
+          <p class="capabilities__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore
+            magna aliquam erat.</p>
+          <button class="capabilities__button"
+                  type="button">ALL SERVICES</button>
+        </div>
+        <div class="capabilities-row">
+          <div class="capabilities-row__first-column column">
+            <ul class="column-list">
+              <li class="column-list__item">
+                <svg class="column-list__icon"
+                     width='70'
+                     height='70'>
+                  <use href="./images/icons.svg#icon-project">
+                  </use>
+                </svg>
+                <h4 class="column-list__subtitle">PROJECT AND CONSTRUCTION MANAGEMENT</h4>
+                <p class="column-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore
+                  magna aliquam erat.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="capabilities-row__second-column column">
+            <ul class="column-list">
+              <li class="column-list__item">
+                <svg class="column-list__icon"
+                     width='70'
+                     height='70'>
+                  <use href="./images/icons.svg#icon-audit">
+                  </use>
+                </svg>
+                <h4 class="column-list__subtitle">STRUCTURE AUDIT AND MAINTENANCE</h4>
+                <p class="column-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore
+                  magna aliquam erat.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="capabilities-row__third-column column">
+            <ul class="column-list">
+              <li class="column-list__item">
+                <svg class="column-list__icon"
+                     width='70'
+                     height='70'>
+                  <use href="./images/icons.svg#icon-factory">
+                  </use>
+                </svg>
+                <h4 class="column-list__subtitle">FACTORY CONSTRUCTION AND MODELING</h4>
+                <p class="column-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore
+                  magna aliquam erat.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIGGER -->
+
+    <section class="trigger"
+             id="work">
+      <div class="trigger-container">
+        <h3 class="trigger__subtitle">Want to build something amazing?</h3>
+        <button class="trigger__button"
+                type="button"
+                data-modal-open>GET IN TOUCH</button>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+
+    <section class="subscribe"
+             id="contact">
+      <div class="subscribe-container">
+        <h3 class="subscribe__subtitle">Newsletter Signup</h3>
+        <form action="#"
+              method="POST"
+              class="subscribe">
+          <div class="subscribe__row">
+            <input class="subscribe__email"
+                   type="email"
+                   name="usermail"
+                   placeholder="E-mail">
+            <button class="subscribe__button"
+                    type="submit">SIGNUP
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER-NAV -->
+
+    <section class="footer-nav">
+      <div class="footer-nav-container">
+        <div class="footer-nav__row">
+          <div class="footer-nav__first-column footer-column one-spoiler">
+            <ul class="footer-nav-list">
+              <li class="footer-nav-list__item">
+                <a href="./index.html"
+                   class="footer-nav__logo">
+                  <svg class="logo-svg"
+                       aria-label="Konstruct Inc Logo"
+                       width='100'
+                       height='24'>
+                    <use href="./images/icons.svg#icon-logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-nav-list__item mobile-list">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__second-column footer-column one-spoiler">
+            <h4 class="footer-nav__subtitle">LINKS</h4>
+            <ul class="footer-nav-list closed">
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">HOME</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">ABOUT</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">SERVICES</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">PROJECTS</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__third-column footer-column one-spoiler">
+            <h4 class="footer-nav__subtitle">HELP</h4>
+            <ul class="footer-nav-list closed">
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">FAQ</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">TERMS</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">CAREER</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__fourth-column footer-column one-spoiler">
+            <h4 class="footer-nav__subtitle">MORE</h4>
+            <ul class="footer-nav-list closed">
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">BLOG</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">PARTNERS</a>
+              </li>
+              <li class="footer-nav-list__item">
+                <a href="#"
+                   class="footer-nav-list__link">NEWS</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__fifth-column footer-column one-spoiler">
+            <address class="footer-nav__address">
+              <h4 class="footer-nav__subtitle">CONTACTS</h4>
+              <ul class="footer-nav-list closed">
+                <li class="footer-nav-list__item">
+                  <p class="footer-nav-list__text">213 Baker Street Oriel City Kounty 7000 KNW, Kountry Name</p>
+                </li>
+                <li class="footer-nav-list__item">
+                  <p class="footer-nav-list__tel">+23 994 233 4022</p>
+                </li>
+                <li class="footer-nav-list__item">
+                  <p class="footer-nav-list__mail">info@konstruct.com</p>
+                </li>
+            </address>
+          </div>
+          <div class="footer-nav__sixth-column footer-column one-spoiler">
+            <ul class="footer-nav-list footer-nav-icons">
+              <li class="footer-nav-list__item footer-nav-icons-list">
+                <a href="#"
+                   class="footer-nav__icon">
+                  <svg class="icon-svg"
+                       width='20'
+                       height='20'>
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-nav-list__item footer-nav-icons-list">
+                <a href="#"
+                   class="footer-nav__icon">
+                  <svg class="icon-svg"
+                       width='20'
+                       height='20'>
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-nav-list__item footer-nav-icons-list">
+                <a href="#"
+                   class="footer-nav__icon">
+                  <svg class="icon-svg"
+                       width='20'
+                       height='20'>
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer__text">&copy;2017 Konstruct Inc.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile-menu -->
+
+  <div class="mobile-menu js-menu-container">
+    <button class="header-button js-close-menu"
+            type="button">
       <svg class="header-button__image"
            aria-label="Mobile-menu switcher"
            width="40"
            height="40">
         <use class="header-button__icon-open"
-             href="./images/icons.svg#icon-menu-opener"></use>
+             href="./images/icons.svg#icon-menu-closer"></use>
       </svg>
     </button>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-list__item">
+        <a href="#"
+           class="mobile-nav-list__link">HOME</a>
+      </li>
+      <li class="mobile-nav-list__item">
+        <a href="#"
+           class="mobile-nav-list__link">ABOUT</a>
+      </li>
+      <li class="mobile-nav-list__item">
+        <a href="#"
+           class="mobile-nav-list__link">SERVICES</a>
+      </li>
+      <li class="mobile-nav-list__item">
+        <a href="#"
+           class="mobile-nav-list__link">WORK</a>
+      </li>
+      <li class="mobile-nav-list__item">
+        <a href="#"
+           class="mobile-nav-list__link">CONTACT</a>
+      </li>
+    </ul>
   </div>
-</header>
 
-<main>
+  <!-- Modal -->
 
-  <!-- HERO -->
-
-  <section class="hero">
-    <h1 class="hero__title">PARTNER WITH KONSTRUCT</h1>
-    <p class="hero__text">An award-winning construction management firm</p>
-  </section>
-
-  <!-- OUR STORY -->
-
-  <section class="story section"
-           id="about">
-    <div class="container">
-      <h3 class="story__subtitle">OUR STORY</h3>
-      <div class="story-row">
-        <div class="story-left-block">
-          <p class="story-left-block__text">Founded in 2011 by John Mathew Smith, <span>Konstruct</span> has become the
-            number one
-            construction management firm</p>
-          <p class="story-left-block__subtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-            tincidunt ut
-            laoreet dolore magna aliquam erat.</p>
-        </div>
-        <div class="story-right-block">
-          <ul class="story-right-block-list">
-            <li class="story-right-block-list__item">
-              <img src="./images/we_plan.jpg"
-                   alt="tools for planing"
-                   class="story-right-block-list__first-img"
-                   width="300">
-              <p class="story-right-block__label">
-                WE PLAN
-              </p>
-            </li>
-            <li class="story-right-block-list__item">
-              <img src="./images/we_manage.jpg"
-                   alt="notebook"
-                   class="story-right-block-list__second-img"
-                   width="300">
-              <p class="story-right-block__label">
-                WE MANAGE
-              </p>
-            </li>
-            <li class="story-right-block-list__item">
-              <img src="./images/we_build.jpg"
-                   alt="architecture plans"
-                   class="story-right-block-list__third-img"
-                   width="300">
-              <p class="story-right-block__label">
-                WE BUILD
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPABILITIES -->
-
-  <section class="capabilities"
-           id="services">
-    <div class="container">
-      <div class="capabilities-header-row">
-        <h3 class="capabilities__subtitle">OUR CAPABILITIES</h3>
-        <p class="capabilities__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore
-          magna aliquam erat.</p>
-        <button class="capabilities__button"
-                type="button">ALL SERVICES</button>
-      </div>
-      <div class="capabilities-row">
-        <div class="capabilities-row__first-column column">
-          <ul class="column-list">
-            <li class="column-list__item">
-              <svg class="column-list__icon"
-                   width='70'
-                   height='70'>
-                <use href="./images/icons.svg#icon-project">
+  <div class="modal is-hidden"
+       data-modal>
+    <div class="modal__body">
+      <div class="modal__content">
+        <button class="modal__close-button"
+                data-modal-close>
+          <svg class="modal__close-img"
+               width="20"
+               height="20">
+            <use href="images/icons.svg#icon-modal-close">
+            </use>
+          </svg>
+        </button>
+        <div class="modal-container">
+          <form class=" modal__form">
+            <h3 class="modal__title">Sign Up</h3>
+            <label class="modal__label">
+              E-mail
+              <input class="modal__field"
+                     type="email"
+                     name="usermail"
+                     required>
+              <svg class="modal__field-img"
+                   width="18"
+                   height="18">
+                <use href="images/icons.svg#icon-email">
                 </use>
               </svg>
-              <h4 class="column-list__subtitle">PROJECT AND CONSTRUCTION MANAGEMENT</h4>
-              <p class="column-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore
-                magna aliquam erat.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="capabilities-row__second-column column">
-          <ul class="column-list">
-            <li class="column-list__item">
-              <svg class="column-list__icon"
-                   width='70'
-                   height='70'>
-                <use href="./images/icons.svg#icon-audit">
+            </label>
+            <label class="modal__label">
+              Telephone
+              <input class="modal__field"
+                     type="tel"
+                     name="telephone"
+                     pattern="[0-9]{11}"
+                     required>
+              <svg class="modal__field-img"
+                   width="18"
+                   height="18">
+                <use href="images/icons.svg#icon-tel">
                 </use>
               </svg>
-              <h4 class="column-list__subtitle">STRUCTURE AUDIT AND MAINTENANCE</h4>
-              <p class="column-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore
-                magna aliquam erat.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="capabilities-row__third-column column">
-          <ul class="column-list">
-            <li class="column-list__item">
-              <svg class="column-list__icon"
-                   width='70'
-                   height='70'>
-                <use href="./images/icons.svg#icon-factory">
+            </label>
+            <label class="modal__label">
+              Username
+              <input class="modal__field"
+                     type="text"
+                     name="username"
+                     required>
+              <svg class="modal__field-img"
+                   width="18"
+                   height="18">
+                <use href="images/icons.svg#icon-user">
                 </use>
               </svg>
-              <h4 class="column-list__subtitle">FACTORY CONSTRUCTION AND MODELING</h4>
-              <p class="column-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore
-                magna aliquam erat.
-              </p>
-            </li>
-          </ul>
+            </label>
+            <div class="modal__btn">
+              <button class="modal__button"
+                      type="submit">Sign Up</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- TRIGGER -->
-
-  <section class="trigger"
-           id="work">
-    <div class="trigger-container">
-      <h3 class="trigger__subtitle">Want to build something amazing?</h3>
-      <button class="trigger__button"
-              type="button"
-              data-modal-open>GET IN TOUCH</button>
-    </div>
-  </section>
-
-  <!-- SUBSCRIBE -->
-
-  <section class="subscribe"
-           id="contact">
-    <div class="subscribe-container">
-      <h3 class="subscribe__subtitle">Newsletter Signup</h3>
-      <form action="#"
-            method="POST"
-            class="subscribe">
-        <div class="subscribe__row">
-          <input class="subscribe__email"
-                 type="email"
-                 name="usermail"
-                 placeholder="E-mail">
-          <button class="subscribe__button"
-                  type="submit">SIGNUP
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER-NAV -->
-
-  <section class="footer-nav">
-    <div class="footer-nav-container">
-      <div class="footer-nav__row">
-        <div class="footer-nav__first-column footer-column one-spoiler">
-          <ul class="footer-nav-list">
-            <li class="footer-nav-list__item">
-              <a href="./index.html"
-                 class="footer-nav__logo">
-                <svg class="logo-svg"
-                     aria-label="Konstruct Inc Logo"
-                     width='100'
-                     height='24'>
-                  <use href="./images/icons.svg#icon-logo"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-nav-list__item mobile-list">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.
-            </li>
-          </ul>
-        </div>
-        <div class="footer-nav__second-column footer-column one-spoiler">
-          <h4 class="footer-nav__subtitle">LINKS</h4>
-          <ul class="footer-nav-list closed">
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">HOME</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">ABOUT</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">SERVICES</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">PROJECTS</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">CONTACT US</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-nav__third-column footer-column one-spoiler">
-          <h4 class="footer-nav__subtitle">HELP</h4>
-          <ul class="footer-nav-list closed">
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">FAQ</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">TERMS</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">CAREER</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-nav__fourth-column footer-column one-spoiler">
-          <h4 class="footer-nav__subtitle">MORE</h4>
-          <ul class="footer-nav-list closed">
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">BLOG</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">PARTNERS</a>
-            </li>
-            <li class="footer-nav-list__item">
-              <a href="#"
-                 class="footer-nav-list__link">NEWS</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-nav__fifth-column footer-column one-spoiler">
-          <address class="footer-nav__address">
-            <h4 class="footer-nav__subtitle">CONTACTS</h4>
-            <ul class="footer-nav-list closed">
-              <li class="footer-nav-list__item">
-                <p class="footer-nav-list__text">213 Baker Street Oriel City Kounty 7000 KNW, Kountry Name</p>
-              </li>
-              <li class="footer-nav-list__item">
-                <p class="footer-nav-list__tel">+23 994 233 4022</p>
-              </li>
-              <li class="footer-nav-list__item">
-                <p class="footer-nav-list__mail">info@konstruct.com</p>
-              </li>
-          </address>
-        </div>
-        <div class="footer-nav__sixth-column footer-column one-spoiler">
-          <ul class="footer-nav-list footer-nav-icons">
-            <li class="footer-nav-list__item footer-nav-icons-list">
-              <a href="#"
-                 class="footer-nav__icon">
-                <svg class="icon-svg"
-                     width='20'
-                     height='20'>
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-nav-list__item footer-nav-icons-list">
-              <a href="#"
-                 class="footer-nav__icon">
-                <svg class="icon-svg"
-                     width='20'
-                     height='20'>
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-nav-list__item footer-nav-icons-list">
-              <a href="#"
-                 class="footer-nav__icon">
-                <svg class="icon-svg"
-                     width='20'
-                     height='20'>
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-
-<footer class="footer">
-  <div class="footer-container">
-    <p class="footer__text">&copy;2017 Konstruct Inc.</p>
   </div>
-</footer>
 
-<!-- Mobile-menu -->
+  <!-- Popup -->
 
-<div class="mobile-menu js-menu-container">
-  <button class="header-button js-close-menu"
-          type="button">
-    <svg class="header-button__image"
-         aria-label="Mobile-menu switcher"
-         width="40"
-         height="40">
-      <use class="header-button__icon-open"
-           href="./images/icons.svg#icon-menu-closer"></use>
+  <div class="popup exit-popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <button class="popup__close-button">
+          <svg class="popup__close-img close"
+               width="20"
+               height="20">
+            <use href="images/icons.svg#icon-modal-close">
+            </use>
+          </svg>
+        </button>
+        <div class="popup-container">
+          <form class=" popup__form">
+            <h3 class="popup__title">Subscribe to GET FREE GUIDE</h3>
+            <label class="popup__label">
+              E-mail
+              <input class="popup__field"
+                     type="email"
+                     name="usermail"
+                     required>
+              <svg class="popup__field-img"
+                   width="18"
+                   height="18">
+                <use href="images/icons.svg#icon-email">
+                </use>
+              </svg>
+            </label>
+            <div class="popup__btn">
+              <button class="popup__button"
+                      type="submit">Get free guide!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scroll -->
+
+  <div class="scrollup">
+    <svg class="scrollup__icon"
+         width="28"
+         height="28">
+      <use href="/images/icons.svg#icon-arrow"></use>
     </svg>
-  </button>
-  <ul class="mobile-nav-list">
-    <li class="mobile-nav-list__item">
-      <a href="#"
-         class="mobile-nav-list__link">HOME</a>
-    </li>
-    <li class="mobile-nav-list__item">
-      <a href="#"
-         class="mobile-nav-list__link">ABOUT</a>
-    </li>
-    <li class="mobile-nav-list__item">
-      <a href="#"
-         class="mobile-nav-list__link">SERVICES</a>
-    </li>
-    <li class="mobile-nav-list__item">
-      <a href="#"
-         class="mobile-nav-list__link">WORK</a>
-    </li>
-    <li class="mobile-nav-list__item">
-      <a href="#"
-         class="mobile-nav-list__link">CONTACT</a>
-    </li>
-  </ul>
-</div>
-
-<!-- Modal -->
-
-<div class="modal is-hidden"
-     data-modal>
-  <div class="modal__body">
-    <div class="modal__content">
-      <button class="modal__close-button"
-              data-modal-close>
-        <svg class="modal__close-img"
-             width="20"
-             height="20">
-          <use href="images/icons.svg#icon-modal-close">
-          </use>
-        </svg>
-      </button>
-      <div class="modal-container">
-        <form class=" modal__form">
-          <h3 class="modal__title">Sign Up</h3>
-          <label class="modal__label">
-            E-mail
-            <input class="modal__field"
-                   type="email"
-                   name="usermail"
-                   required>
-            <svg class="modal__field-img"
-                 width="18"
-                 height="18">
-              <use href="images/icons.svg#icon-email">
-              </use>
-            </svg>
-          </label>
-          <label class="modal__label">
-            Telephone
-            <input class="modal__field"
-                   type="tel"
-                   name="telephone"
-                   pattern="[0-9]{11}"
-                   required>
-            <svg class="modal__field-img"
-                 width="18"
-                 height="18">
-              <use href="images/icons.svg#icon-tel">
-              </use>
-            </svg>
-          </label>
-          <label class="modal__label">
-            Username
-            <input class="modal__field"
-                   type="text"
-                   name="username"
-                   required>
-            <svg class="modal__field-img"
-                 width="18"
-                 height="18">
-              <use href="images/icons.svg#icon-user">
-              </use>
-            </svg>
-          </label>
-          <div class="modal__btn">
-            <button class="modal__button"
-                    type="submit">Sign Up</button>
-          </div>
-        </form>
-      </div>
-    </div>
   </div>
-</div>
-
-<!-- Scroll -->
-
-<div class="scrollup">
-  <svg class="scrollup__icon"
-       width="28"
-       height="28">
-    <use href="/images/icons.svg#icon-arrow"></use>
-  </svg>
-</div>
-
-<body>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script defer
@@ -501,7 +550,10 @@
   <script src="js/modal-login.js"></script>
   <script src="js/scroll-top.js"
           type="module"></script>
-
+  <script src="js/exit-popup.js"
+          type="module"></script>
+  <script src="js/preloader.js"
+          type="module"></script>
 </body>
 
 </html>

@@ -5,6 +5,8 @@
 @import "./abstracts/placeholders";
 @import "./components/mobile-menu";
 @import "./components/scroll-top";
+@import "./components/preloader";
+@import "./components/site-scroll";
 @import "./base/fonts";
 @import "./base/base";
 @import "./base/helpers";
@@ -18,3 +20,5 @@
 @import "./layout/footer";
 @import "./layout/modal-base";
 @import "./layout/modal-form";
+@import "./layout/popup-base";
+@import "./layout/popup-form";

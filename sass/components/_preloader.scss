@@ -1,0 +1,21 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #010001;
+  height: 100%;
+  width: 100%;
+  @include flexType(f, c, c);
+  z-index: 4;
+}
+
+.disappear {
+  animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -94,7 +94,7 @@
 // Fs-lh-fw-ls
 
 @mixin fontLineWeightLetter($font-size, $line-height, $font-weight, $letter-spacing, $px: null, $basePx: null) {
-  font-size: #{$font-size * 1px};
+  font-size: rem($font-size);
 
   @if ($line-height == "base") {
     line-height: $base-line-height;

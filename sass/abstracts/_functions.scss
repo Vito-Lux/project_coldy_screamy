@@ -42,10 +42,16 @@
 
 // PX to em
 
-@function em($px, $basePx: $baseFontPx) {
+@function em($px, $basePx: 16) {
   $px: $px / ($px * 0 + 1);
   $basePx: $basePx / ($basePx * 0 + 1);
   @return decimal-floor($px / $basePx * 1em);
 }
 
-$baseFontPx: 16px;
+// PX to rem
+
+@function rem($px, $basePx: 16) {
+  $px: $px / ($px * 0 + 1);
+  $basePx: $basePx / ($basePx * 0 + 1);
+  @return decimal-floor($px / $basePx * 1rem);
+}
